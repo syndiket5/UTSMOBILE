@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity"
+    android:orientation="vertical"
+    android:id="@+id/mContainer"
+    android:background="@color/primaryColor">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/cardimage">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/music"
+            android:scaleType="centerCrop"
+            android:id="@+id/covercard"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Name"
+        android:id="@+id/song_name"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artist Name"
+        android:id="@+id/artist_name"
+        android:textSize="17dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+
+        android:orientation="horizontal"
+        android:id="@+id/durabar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="00:00"
+            android:id="@+id/durationSong"/>
+        <SeekBar
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--:--"
+            android:id="@+id/durationTotal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_prev_button"
+            />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:backgroundTint="@color/secondaryColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_pause"
+            android:src="@drawable/ic_play_button"
+            android:focusable="true"
+            android:clickable="true"/>
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_next_button"
+/>
+    </LinearLayout>
+</LinearLayout>
